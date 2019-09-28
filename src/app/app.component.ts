@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+// import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+// import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { FirebaseService } from './providers/firebase.service';
 import { AuthService } from './providers/auth.service';
 
@@ -14,8 +14,8 @@ import { AuthService } from './providers/auth.service';
 export class AppComponent {
   constructor(
     private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar,
+    // private splashScreen: SplashScreen,
+    // private statusBar: StatusBar,
     private firebaseService: FirebaseService,
     private authService: AuthService
   ) {
@@ -24,8 +24,9 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      // No cordova app
+      // this.statusBar.styleDefault();
+      // this.splashScreen.hide();
       this.authService.anonymuslyAuth();
     });
   }

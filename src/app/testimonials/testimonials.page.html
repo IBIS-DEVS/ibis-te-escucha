@@ -10,13 +10,13 @@
     <ion-card *ngFor="let testimonial of testimonials">
       <ion-card-header>
         <ion-card-subtitle>Testimonio:</ion-card-subtitle>
-        <ion-card-title text-nowrap>{{testimonial.title}} {{testimonial.title}} {{testimonial.title}}</ion-card-title>
+        <ion-card-title class="ion-text-nowrap">{{testimonial.title}} {{testimonial.title}} {{testimonial.title}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <p class="ion-text-wrap">{{testimonial.description}}</p><span>...</span>
       </ion-card-content>
-      <div class="card-note-contariner" padding>
-        <ion-note padding margin-bottom>{{testimonial.author}},{{testimonial.authorAge}} años</ion-note>
+      <div class="card-note-contariner ion-padding">
+        <ion-note class="ion-margin-bottom ion-padding">{{testimonial.author}},{{testimonial.authorAge}} años</ion-note>
       </div>
       
     </ion-card>

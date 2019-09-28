@@ -14,7 +14,7 @@ export class TestimonialsPage {
 
   get testimonials(): Testimonial[] {
     // Only for test
-    return [MOCK_TESTIMONIAL, MOCK_TESTIMONIAL];
+    // return [MOCK_TESTIMONIAL, MOCK_TESTIMONIAL];
     return this.tstimonialService.listTestimonials;
   }
 
