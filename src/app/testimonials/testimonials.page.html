@@ -7,7 +7,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-spinner *ngIf="loading" name="lines"></ion-spinner>
+  <div class="error-comntainer ion-text-center ion-padding">
+    <ion-spinner *ngIf="loading"></ion-spinner>
+  </div>
   <ion-card
     *ngFor="let testimonial of testimonials; let i = index"
     class="pointer card{{ i % 5 }}"
