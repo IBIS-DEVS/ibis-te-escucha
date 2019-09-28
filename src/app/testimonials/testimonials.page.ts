@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Testimonial, MOCK_TESTIMONIAL } from '../models/testimonials';
 import { TestimonialService } from '../providers/testimonial.service';
+import { ModalController } from '@ionic/angular';
+import { TestimonialDetailPage } from '../testimonial-detail/testimonial-detail.page';
 
 @Component({
   selector: 'app-testimonials',
@@ -8,7 +10,8 @@ import { TestimonialService } from '../providers/testimonial.service';
   styleUrls: ['testimonials.page.scss']
 })
 export class TestimonialsPage {
-  constructor(public testimonialService: TestimonialService) {
+  constructor(public testimonialService: TestimonialService,
+    public modalCtrl: ModalController, ) {
     console.debug('TestimonialsPage init');
   }
 
@@ -18,8 +21,11 @@ export class TestimonialsPage {
     return this.testimonialService.listTestimonials.filter(item=>!!item.approved);
   }
 
-  onClikcTestimonial(testimonial:Testimonial){
-    testimonial.authorAge
-    console.debug("onClikcTestimonial",{})
+  async onClikcTestimonial(testimonial:Testimonial){
+    const modal = await this.modalCtrl.create({
+      component: TestimonialDetailPage,
+      componentProps: testimonial,
+    });
+    return await modal.present();
   }
 }
