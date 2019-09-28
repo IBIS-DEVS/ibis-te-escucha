@@ -1,9 +1,86 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Three
+    <ion-title class="ion-text-center">
+      Canales de Información
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-xs="12" size="8">
+        <mat-accordion>
+          <!-- I'm suffering of sexual violence -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3>Estoy sufriendo de violencia sexual</h3>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-panel-description>
+              <h2>¿Que puedo hacer?:</h2>
+              <ul>
+                <li>
+                  Dirígete lo más pronto posible al oficial de policía o al funcionario de transmilenio más cercano
+                </li>
+                <li>
+                  Informale tu situación
+                </li>
+              </ul>
+            </mat-panel-description>
+          </mat-expansion-panel>
+          <!-- I've lived sexual violence -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3>He vívido violencia sexual</h3>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-panel-description>
+              <h2>¿Que puedo hacer?:</h2>
+              <ul>
+                <li>
+                  Comunicate con la Línea purpura<a (click)="call('018000112137')">(018000112137)</a> en donde
+                  encontrarás atención integral a las mujeres en temas de violencia sexual
+                </li>
+              </ul>
+            </mat-panel-description>
+          </mat-expansion-panel>
+
+          <!-- Lay Tools -->
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3>Herramientas legales</h3>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-panel-description>
+              <ul>
+                <li>
+                  <b>Artículo 210A</b> del código criminal expone el acoso sexual como un crimen.
+                </li>
+                <li>
+                  <b>Sentencia SP107-2’018</b> requiere que la víctima sufra daños como zozobras, intimidación,
+                  afectación psicológica, mortificación o un clima hostil y que el perpetrador haga actos de manera
+                  constante, esta sentencia es efectiva según el grado de intensidad.
+                  <b>Artículo 210A</b> del código criminal expone el acoso sexual como un crimen.
+                </li>
+                <li>
+                  <b>Sentencia SP107-2’018</b> requiere que la víctima sufra daños como zozobras, intimidación,
+                  afectación psicológica, mortificación o un clima hostil y que el perpetrador haga actos de manera
+                  constante, esta sentencia es efectiva según el grado de intensidad.
+                </li>
+                <li><b>Proyecto de ley 112 de 2014.</b> Delito de Acoso Sexual en Transporte Público. El que realice
+                tocamientos inesperados en partes íntimas del cuerpo de una persona, sin su consentimiento,
+                aprovechándose de las circunstancias propias de los medios de acceso y utilización de transporte
+                público, incurrirá en prisión de dos (2) a cuatro años (4) años.
+              </li> 
+              </ul>
+            </mat-panel-description>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

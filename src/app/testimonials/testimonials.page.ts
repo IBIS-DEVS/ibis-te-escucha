@@ -22,8 +22,4 @@ export class TestimonialsPage {
     testimonial.authorAge
     console.debug("onClikcTestimonial",{})
   }
-
-  onClickAdd(){
-    this.testimonialService.saveTestimonial(this.testimonials[0]);
-  }
 }
