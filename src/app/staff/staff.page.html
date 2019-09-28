@@ -13,7 +13,7 @@
         <h1>{{chat.name}}</h1>
         <p>{{chat.last_msg}}</p>
       </ion-label>
-      <ion-note slot="end" class="message-time">{{timeToStringDate(chat.timestamp)}}</ion-note>
+      <ion-note *ngIf="chat.time" slot="end" class="message-time">{{timeToStringDate(chat.time)}}</ion-note>
     </ion-item>
   </ion-list>
 
