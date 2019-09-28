@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { Testimonial, MOCK_TESTIMONIAL } from '../models/testimonials';
 import { TestimonialService } from '../providers/testimonial.service';
-import { Testimonial } from '../models/testimonials';
 
 @Component({
   selector: 'app-testimonials',
@@ -8,12 +8,18 @@ import { Testimonial } from '../models/testimonials';
   styleUrls: ['testimonials.page.scss']
 })
 export class TestimonialsPage {
-
-  constructor(TestimonialService:TestimonialService) {
-    console.debug("TestimonialsPage init");
-    
+  constructor(public tstimonialService: TestimonialService) {
+    console.debug('TestimonialsPage init');
   }
 
-  testimonials:Testimonial[]
+  get testimonials(): Testimonial[] {
+    // Only for test
+    return [MOCK_TESTIMONIAL, MOCK_TESTIMONIAL];
+    return this.tstimonialService.listTestimonials;
+  }
 
+  onClikcTestimonial(testimonial:Testimonial){
+    testimonial.authorAge
+    console.debug("onClikcTestimonial",{})
+  }
 }

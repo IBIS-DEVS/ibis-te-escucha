@@ -19,13 +19,17 @@ export class TestimonialService {
   }
   public getTestimonials() {
     if (!this.isRegister) {
-      return this.testimonalsRef.on('value', this.onTestimonial);
+      this.isRegister = true;
+      return this.testimonalsRef.on('value', snapshot => {
+        this.onTestimonial(snapshot);
+      });
     }
     return false;
   }
 
-  private onTestimonial(snapshot) {
+  private onTestimonial(snapshot: firebase.database.DataSnapshot) {
     this.listTestimonials = snapshot.val();
-    this.isLoading = true;
+    this.isLoading = false;
+    console.debug('onTestimonial:', { testimonials: this.listTestimonials });
   }
 }
