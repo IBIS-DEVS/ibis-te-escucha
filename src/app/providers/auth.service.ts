@@ -31,5 +31,15 @@ export class AuthService {
   }
 
 
+  emailPassLogin(email, password) {
+    return firebase.auth().signInWithEmailAndPassword(email, password)
+  }
+  
+  get currentUserObservable(): any {
+    return firebase.auth
+  }
+
+
+
 
 }
