@@ -13,7 +13,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../testimonials/testimonials.module').then(m => m.testimonialsPageModule)
+              import('../testimonials/testimonials.module').then(m => m.TestimonialsPageModule)
           }
         ]
       },
