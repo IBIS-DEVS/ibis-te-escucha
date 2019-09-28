@@ -9,3 +9,30 @@ Ibis te escucha es una plataforma en la cuál cualquier persona pueda describir 
 # Tools 
 Framework: [Ionic Framework](https://ionicframework.com/)
 UI: [Angular Material](https://material.angular.io/)
+
+# install proyect
+
+Run: 
+
+```npm i```
+
+# run proyect at developer
+
+Run :
+
+```npm run start```
+
+# build proyect
+
+Run :
+
+```ionic build --prod```
+
+# deploy proyect
+
+Run :
+
+```
+firebase login
+firebase deploy
+```
