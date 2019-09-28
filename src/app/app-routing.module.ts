@@ -13,12 +13,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
-    path: 'staff', loadChildren: './staff/staff.module#StaffPageModule',
-    canActivate: [StaffGuard]
-  },
-  { path: 'staff-login', loadChildren: './staff-login/staff-login.module#StaffLoginPageModule' }
+  }
 ];
 @NgModule({
   imports: [
