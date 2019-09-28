@@ -8,6 +8,7 @@ import "firebase/auth";
 export class AuthService {
 
   user: any;
+  name: String;
 
   constructor() {
     this.initEvents();

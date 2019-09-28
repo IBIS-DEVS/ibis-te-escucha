@@ -45,8 +45,9 @@ export class chatPage implements OnInit {
       this.messages.push(message);
     }
     setTimeout(() => {
+      this.chatService.setChatReaded(this.key);
       this.scrollToBottom();
-    }, 0);
+    }, 800);
   }
 
   sendMessage() {
@@ -60,7 +61,7 @@ export class chatPage implements OnInit {
     return document.querySelector('ion-content');
   }
   scrollToBottom() {
-    this.getContent().scrollToBottom(0);
+    this.getContent().scrollToBottom(200);
   }
 
 }
