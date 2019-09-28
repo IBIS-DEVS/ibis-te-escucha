@@ -21,7 +21,7 @@ export class chatPage implements OnInit {
   messages: Array<any> = []
 
   constructor(private route: ActivatedRoute, private navCtrl: NavController, private chatService: ChatService,
-    private configService: ConfigService, private authService: AuthService) {
+    private configService: ConfigService, public authService: AuthService) {
   }
 
   ngOnInit() {

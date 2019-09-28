@@ -12,7 +12,7 @@ export class StaffPage implements OnInit {
 
   chats: Array<any> = [];
 
-  constructor(public chatService: ChatService, private route: Router, private authService: AuthService) {
+  constructor(public chatService: ChatService, private route: Router, public authService: AuthService) {
     this.chatsSubscription();
   }
 

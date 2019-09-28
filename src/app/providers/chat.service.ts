@@ -11,7 +11,7 @@ export class ChatService {
 
   database: any;
 
-  constructor(private authService: AuthService) {
+  constructor(public authService: AuthService) {
     this.database = firebase.database();
   }
 
