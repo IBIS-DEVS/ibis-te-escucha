@@ -50,6 +50,8 @@ export class chatPage implements OnInit {
   }
 
   sendMessage() {
+    // Not send empty messages
+    if(this.text.trim() == '') return;
     this.chatService.sendMessage(this.key, this.text);
     this.text = '';
   }
