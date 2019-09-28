@@ -63,6 +63,7 @@ export class ChatService {
   }
 
   async setChatReaded(chat_key) {
+    if (this.authService.user.isAnonymous) return;
     const values_ref = this.database.ref('active-chats/' + chat_key);
     const values = await values_ref.once("value")
     const values_data = values.val();
