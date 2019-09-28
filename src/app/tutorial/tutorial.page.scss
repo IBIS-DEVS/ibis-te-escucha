@@ -3,10 +3,11 @@
 }
 
 
-ion-slide div{
-    max-width: 800px;
-}
-
-ion-slide img{
-    max-width: 300px;
+@media (min-width: 768px){
+    ion-slide div{
+        max-width: 800px;
+    }  
+    ion-slide img{
+        max-width: 300px;
+    }
 }
