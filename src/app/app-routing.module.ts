@@ -9,6 +9,7 @@ const routes: Routes = [
     canActivate: [StaffGuard]
   },
   { path: 'staff-login', loadChildren: './staff-login/staff-login.module#StaffLoginPageModule' },
+  { path: 'chat', loadChildren: './chat/chat.module#chatPageModule' },
   { path: '', loadChildren: './tutorial/tutorial.module#TutorialPageModule' },
   {
     path: '',
