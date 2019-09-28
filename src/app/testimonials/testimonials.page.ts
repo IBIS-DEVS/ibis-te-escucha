@@ -31,4 +31,8 @@ export class TestimonialsPage {
     });
     return await modal.present();
   }
+
+  get loading() {
+    return this.testimonialService.isLoading;
+  }
 }
