@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatExpansionModule} from '@angular/material/expansion';
 import { TestimonialDetailPageModule } from './testimonial-detail/testimonial-detail.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +25,8 @@ import { TestimonialDetailPageModule } from './testimonial-detail/testimonial-de
     AppRoutingModule, 
     BrowserAnimationsModule,
     MatExpansionModule,
-    TestimonialDetailPageModule
+    TestimonialDetailPageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     StatusBar,
