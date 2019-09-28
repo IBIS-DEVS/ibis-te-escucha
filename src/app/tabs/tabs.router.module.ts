@@ -8,45 +8,45 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'testimonials',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../testimonials/testimonials.module').then(m => m.testimonialsPageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'chat',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../chat/chat.module').then(m => m.chatPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'informationChannels',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../informationChannels/informationChannels.module').then(m => m.informationChannelsPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/testimonials',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/testimonials',
     pathMatch: 'full'
   }
 ];
