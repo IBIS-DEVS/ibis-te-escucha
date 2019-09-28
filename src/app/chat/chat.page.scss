@@ -11,19 +11,23 @@ ion-textarea {
     margin-top: 10px;
     margin-bottom: 10px;
     max-width: 60%;    
-    --border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
 .self-msg {
-    padding-right: 10px;    
+    margin-right: 10px;    
     text-align: right;
     margin-left: 40%;
-    --ion-background-color: #eaffea;
+    --ion-background-color: #defcde;
 }
 
 .default-msg{
-    padding-left: 10px;    
+    margin-left: 10px;    
     text-align: left;    
     margin-right: 40%;
-    --ion-background-color: #e7fdfd;
+    --ion-background-color: rgba(136, 133, 184, 0.3);
+}
+
+.sendButton{
+    margin-left: 15px;
 }
