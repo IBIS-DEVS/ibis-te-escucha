@@ -8,18 +8,22 @@ import { TestimonialService } from '../providers/testimonial.service';
   styleUrls: ['testimonials.page.scss']
 })
 export class TestimonialsPage {
-  constructor(public tstimonialService: TestimonialService) {
+  constructor(public testimonialService: TestimonialService) {
     console.debug('TestimonialsPage init');
   }
 
   get testimonials(): Testimonial[] {
     // Only for test
     // return [MOCK_TESTIMONIAL, MOCK_TESTIMONIAL];
-    return this.tstimonialService.listTestimonials;
+    return this.testimonialService.listTestimonials;
   }
 
   onClikcTestimonial(testimonial:Testimonial){
     testimonial.authorAge
     console.debug("onClikcTestimonial",{})
+  }
+
+  onClickAdd(){
+    this.testimonialService.saveTestimonial(this.testimonials[0]);
   }
 }
