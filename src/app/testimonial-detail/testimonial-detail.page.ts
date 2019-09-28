@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Testimonial } from '../models/testimonials';
-import { ActivatedRoute, Router, ParamMap } from '@angular/router';
-import { TestimonialService } from '../providers/testimonial.service';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -11,23 +9,11 @@ import { ModalController } from '@ionic/angular';
 })
 export class TestimonialDetailPage {
   id = '';
-  constructor(
-    // private route: ActivatedRoute,
-    // private testimonialService: TestimonialService
-    public modalCtrl: ModalController
-  ) {}
+  constructor(public modalCtrl: ModalController) {}
 
-  @Input() testimonials: Testimonial;
+  @Input() testimonial: Testimonial;
 
   closeModal() {
     this.modalCtrl.dismiss();
   }
-  // get testimonial(): Testimonial {
-  //   this.id = this.route.snapshot.paramMap.get('id');
-  //   let testimonial = this.testimonialService.listTestimonials[this.id];
-  //   if (!testimonial) {
-  //     testimonial = this.testimonialService.listTestimonials[0];
-  //   }
-  //   return testimonial;
-  // }
 }
