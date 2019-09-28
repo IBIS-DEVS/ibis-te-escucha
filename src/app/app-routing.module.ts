@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  
+  { path: 'staff', loadChildren: './staff/staff.module#StaffPageModule' },
+  { path: '', loadChildren: './tutorial/tutorial.module#TutorialPageModule' },
   {
-    path: 'tabs',
+    path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
-  { path: 'staff', loadChildren: './staff/staff.module#StaffPageModule' }
-  },
-  { path: '', loadChildren: './page/tutorial/tutorial.module#TutorialPageModule' }
 
 ];
 @NgModule({
