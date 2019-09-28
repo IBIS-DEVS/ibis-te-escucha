@@ -13,8 +13,10 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let chat of chats" (click)="openChat(chat)">
-      <!-- <ion-note slot="start" *ngIf="!chat.readed" class="new-message">!</ion-note> -->
+    <ion-item *ngFor="let chat of chats" [ngClass]="{'not-readed': !chat.readed}" (click)="openChat(chat)">
+      <ion-note slot="start" *ngIf="!chat.readed" class="new-message">
+        *
+      </ion-note>
       <ion-label>
         <h1>{{chat.name}}</h1>
         <p>{{chat.last_msg}}</p>
