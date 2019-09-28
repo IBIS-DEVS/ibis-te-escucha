@@ -38,8 +38,8 @@ export class AuthService {
   get currentUserObservable(): any {
     return firebase.auth
   }
-
-
-
-
+  
+  logout(){
+    firebase.auth().signOut();
+  }
 }

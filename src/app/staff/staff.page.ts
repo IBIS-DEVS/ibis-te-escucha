@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../providers/chat.service';
 import { Route, Router } from '@angular/router';
+import { AuthService } from '../providers/auth.service';
 
 @Component({
   selector: 'app-staff',
@@ -11,7 +12,7 @@ export class StaffPage implements OnInit {
 
   chats: Array<any> = [];
 
-  constructor(public chatService: ChatService, private route: Router) {
+  constructor(public chatService: ChatService, private route: Router, private authService: AuthService) {
     this.chatsSubscription();
   }
 
@@ -35,11 +36,16 @@ export class StaffPage implements OnInit {
   }
 
   timeToStringDate(time) {
-    return new Date(time).toLocaleDateString();
+    return new Date(time).toLocaleDateString() + ' ' + new Date(time).toLocaleTimeString();;
   }
 
   openChat(chat) {
     this.route.navigate(['chat/' + chat.key + '/'])
+  }
+
+  logout(){
+    this.authService.logout();
+    this.route.navigate(['/']);
   }
 
 }
