@@ -26,7 +26,7 @@ export class ChatService {
   async sendMessage(chat_key, text) {
     const newMessage = this.getMessages(chat_key).push();
     let sender;
-    if(this.authService.user.isAnonymous) sender = 'Paciente';
+    if(this.authService.user.isAnonymous) sender = 'Anonimo';
     else sender = 'Experto';
     let message = {
       sender: sender,
