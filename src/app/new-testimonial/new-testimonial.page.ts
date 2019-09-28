@@ -3,11 +3,12 @@ import { Testimonial } from '../models/testimonials';
 import { TestimonialService } from '../providers/testimonial.service';
 import { Router } from '@angular/router';
 
-const emptyTestimonial = {
+const emptyTestimonial: Testimonial = {
   author: '',
   authorAge: '',
   description: '',
-  title: ''
+  title: '',
+  approved: false
 };
 @Component({
   selector: 'app-new-testimonial',

@@ -7,7 +7,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let testimonial of testimonials; let i = index" class="card{{i % 5}}"> 
+  <ion-card
+    *ngFor="let testimonial of testimonials; let i = index"
+    class="card{{ i % 5 }}"
+    (click)="onClikcTestimonial(testimonial)"
+  >
     <ion-card-header>
       <ion-card-subtitle>Testimonio:</ion-card-subtitle>
       <ion-card-title class="ion-text-nowrap">
