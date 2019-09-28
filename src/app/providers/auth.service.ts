@@ -39,7 +39,7 @@ export class AuthService {
     return firebase.auth
   }
   
-  logout(){
+  public logout(){
     firebase.auth().signOut();
   }
 }

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TabsPage {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   goToChat() {
     this.router.navigate(['/tabs/chat/' + this.authService.user.uid]);

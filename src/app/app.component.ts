@@ -13,11 +13,11 @@ import { AuthService } from './providers/auth.service';
 })
 export class AppComponent {
   constructor(
-    private platform: Platform,
-    // private splashScreen: SplashScreen,
-    // private statusBar: StatusBar,
-    private firebaseService: FirebaseService,
-    private authService: AuthService
+    public platform: Platform,
+    // public splashScreen: SplashScreen,
+    // public statusBar: StatusBar,
+    public firebaseService: FirebaseService,
+    public authService: AuthService
   ) {
     this.initializeApp();
   }

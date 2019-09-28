@@ -15,7 +15,7 @@ export class StaffLoginPage implements OnInit {
 
   credentials: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private configService: ConfigService,
+  constructor(private formBuilder: FormBuilder, public authService: AuthService, private configService: ConfigService,
     private _router: Router) {
     this.credentials = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
