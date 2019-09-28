@@ -1,35 +1,48 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Escribe tu testimonio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="formContainer">
-    <img src="assets/images/writeTestimonial.jpg">
+    <img src="assets/images/writeTestimonial.jpg" />
     <div>
-        <ion-item >
-            <ion-label position="stacked">Título *</ion-label>
-            <ion-input></ion-input>
-          </ion-item>
-      
-          <ion-item >
-            <ion-label position="stacked">Descripción *</ion-label>
-            <ion-textarea></ion-textarea>
-          </ion-item>
-      
-          <ion-item >
-            <ion-label position="stacked">Nombre</ion-label>
-            <ion-input></ion-input>
-          </ion-item>
-      
-          <ion-item >
-            <ion-label position="stacked">Edad</ion-label>
-            <ion-input type="number"></ion-input>
-          </ion-item>
-    </div>
-    
+      <ion-item>
+        <ion-label position="stacked">Título *</ion-label>
+        <ion-input [(ngModel)]="testimonial.title" required></ion-input>
+      </ion-item>
 
-    <ion-button class="ion-margin-top" expand="block">Publicar</ion-button>
-  </div>       
+      <ion-item>
+        <ion-label position="stacked">Cuentanos tu testimonio *</ion-label>
+        <ion-textarea
+          [(ngModel)]="testimonial.description"
+          required
+        ></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input
+          [(ngModel)]="testimonial.author"
+          placeholder="Anónimo "
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Edad</ion-label>
+        <ion-input
+          [(ngModel)]="testimonial.authorAge"
+          type="number"
+        ></ion-input>
+      </ion-item>
+    </div>
+
+    <ion-button (click)="onClickPublish()" class="ion-margin-top" expand="block"
+      >Publicar</ion-button
+    >
+  </div>
 </ion-content>

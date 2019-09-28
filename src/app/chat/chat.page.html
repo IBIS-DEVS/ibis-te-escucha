@@ -5,7 +5,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <!-- <ion-title>chat</ion-title> -->
+    <ion-title>Chatea con un experto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
         'default-msg': msg.sender_uid !== authService.user.uid
       }">
       <ion-label class="ion-text-wrap">
-        <p>{{msg.sender_uid === authService.user.uid ? "Tú": msg.name}}</p>
+        <p>{{msg.sender_uid === authService.user.uid ? "Tú": msg.sender}}</p>
         <h4>{{msg.message}}</h4>
       </ion-label>
     </ion-item>
