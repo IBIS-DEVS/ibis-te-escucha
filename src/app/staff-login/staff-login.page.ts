@@ -38,11 +38,4 @@ export class StaffLoginPage implements OnInit {
     });
   }
 
-  async recoverPassword() {
-    const modal = await this.modalController.create({
-      component: RecoverPasswordPage
-    });
-    modal.present();
-  }
-
 }
