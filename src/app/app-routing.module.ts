@@ -13,7 +13,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  },  { path: 'new-testimonial', loadChildren: './new-testimonial/new-testimonial.module#NewTestimonialPageModule' }
+
 ];
 @NgModule({
   imports: [
