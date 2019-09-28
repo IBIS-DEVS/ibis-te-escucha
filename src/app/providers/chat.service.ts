@@ -16,7 +16,7 @@ export class ChatService {
   }
 
   getChats() {
-    return this.database.ref('active-chats')
+    return this.database.ref('active-chats');
   }
 
   getMessages(key) {
@@ -26,8 +26,8 @@ export class ChatService {
   async sendMessage(chat_key, text) {
     const newMessage = this.getMessages(chat_key).push();
     let sender;
-    if(this.authService.user.isAnonymous) sender = 'Paciente'
-    else sender = 'Experto'
+    if(this.authService.user.isAnonymous) sender = 'Paciente';
+    else sender = 'Experto';
     let message = {
       sender: sender,
       sender_uid: this.authService.user.uid,
@@ -35,6 +35,21 @@ export class ChatService {
       readed: false,
       message: text
     }
-    return await newMessage.set(message);
+    await newMessage.set(message);
+    await this.validateActiveChats(chat_key, message);
+    return
+  }
+
+  async validateActiveChats(chat_key, message){
+    await this.getChats().child(chat_key).set(
+      {
+        last_msg: message.message,
+        name: message.sender,
+        readed: false,
+        sender_uid: message.sender_uid,
+        time: message.timestamp
+      }
+    )
+    return
   }
 }
