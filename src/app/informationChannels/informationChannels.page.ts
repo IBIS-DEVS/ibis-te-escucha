@@ -9,4 +9,7 @@ export class informationChannelsPage {
 
   constructor() {}
 
+  call(number){
+    window.open('tel:' + number);
+  }
 }
