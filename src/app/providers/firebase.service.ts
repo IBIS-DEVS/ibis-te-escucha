@@ -12,7 +12,7 @@ export class FirebaseService {
     databaseURL: "https://hackatrix-ibis.firebaseio.com",
     projectId: "hackatrix-ibis",
     storageBucket: "",
-    messagingSenderId: "711537044704",
+    messagingSenderId: "",
     appId: "1:711537044704:web:3e15229aa33133c40eb485",
     measurementId: "G-FFGGZY4QND"
   };
