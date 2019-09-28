@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Inicio sesión staff
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="6" offsetMd="3" size="12" offset="0">
+
+        <form [formGroup]="credentials" (ngSubmit)="login()">
+          <ion-item>
+            <ion-label position="floating" color="tertiary">
+              Correo
+            </ion-label>
+            <ion-input type="email" formControlName="email" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" color="tertiary">
+              Contraseña
+            </ion-label>
+            <ion-input type="password" formControlName="password" required></ion-input>
+          </ion-item>
+          <ion-button color="success" type="submit" [disabled]="!credentials.valid" margin-top expand="block">Ingresar
+          </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

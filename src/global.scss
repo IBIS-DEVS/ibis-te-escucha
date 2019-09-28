@@ -25,6 +25,17 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+// HEIGHTS
+
+.fullHeight{
+    height: 100%;
+}
+
+// TEXTS
+
+p{
+    color: #444;
+}
 // NO WRAP
 .ion-text-nowrap,
 [text-nowrap] {
