@@ -35,11 +35,19 @@
     height: 100%;
 }
 
+//NAVBAR
+
+ion-toolbar{
+  --background: #887ab8;
+  --color: white;
+}
+
 // TEXTS
 
 p{
     color: #444;
 }
+
 // NO WRAP
 .ion-text-nowrap,
 [text-nowrap] {
