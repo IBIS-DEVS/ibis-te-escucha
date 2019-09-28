@@ -15,7 +15,7 @@ export class TestimonialsPage {
   get testimonials(): Testimonial[] {
     // Only for test
     // return [MOCK_TESTIMONIAL, MOCK_TESTIMONIAL];
-    return this.testimonialService.listTestimonials;
+    return this.testimonialService.listTestimonials.filter(item=>!!item.approved);
   }
 
   onClikcTestimonial(testimonial:Testimonial){
