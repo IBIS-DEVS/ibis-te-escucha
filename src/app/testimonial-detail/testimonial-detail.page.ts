@@ -12,6 +12,7 @@ export class TestimonialDetailPage {
   constructor(public modalCtrl: ModalController) {}
 
   @Input() testimonial: Testimonial;
+  @Input() index: number;
 
   closeModal() {
     this.modalCtrl.dismiss();

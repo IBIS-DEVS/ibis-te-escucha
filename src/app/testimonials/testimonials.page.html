@@ -10,7 +10,7 @@
   <ion-card
     *ngFor="let testimonial of testimonials; let i = index"
     class="card{{ i % 5 }}"
-    (click)="onClikcTestimonial(testimonial)"
+    (click)="onClikcTestimonial(testimonial, i)"
   >
     <ion-card-header>
       <ion-card-subtitle>Testimonio:</ion-card-subtitle>

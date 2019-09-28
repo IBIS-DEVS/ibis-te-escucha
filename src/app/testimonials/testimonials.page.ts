@@ -24,10 +24,10 @@ export class TestimonialsPage {
     );
   }
 
-  async onClikcTestimonial(testimonial: Testimonial) {
+  async onClikcTestimonial(testimonial: Testimonial, index: number) {
     const modal = await this.modalCtrl.create({
       component: TestimonialDetailPage,
-      componentProps: { testimonial }
+      componentProps: { testimonial, index }
     });
     return await modal.present();
   }
