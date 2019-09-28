@@ -3,6 +3,12 @@ import { Testimonial } from '../models/testimonials';
 import { TestimonialService } from '../providers/testimonial.service';
 import { Router } from '@angular/router';
 
+const emptyTestimonial = {
+  author: '',
+  authorAge: '',
+  description: '',
+  title: ''
+};
 @Component({
   selector: 'app-new-testimonial',
   templateUrl: './new-testimonial.page.html',
@@ -10,10 +16,7 @@ import { Router } from '@angular/router';
 })
 export class NewTestimonialPage implements OnInit {
   public testimonial: Testimonial = {
-    author: '',
-    authorAge: '',
-    description: '',
-    title: ''
+    ...emptyTestimonial
   };
   public error = '';
   constructor(
@@ -25,12 +28,15 @@ export class NewTestimonialPage implements OnInit {
 
   onClickPublish() {
     if (!this.testimonial.title) {
-      this.error = 'Debes incluir un titulo';
+      return (this.error = 'Debes incluir un titulo');
     }
     if (!this.testimonial.description) {
-      this.error = 'Debes incluir un titulo';
+      return (this.error = 'Debes incluir el testimonio');
     }
     this.testimonialService.saveTestimonial(this.testimonial);
+    this.testimonial = {
+      ...emptyTestimonial
+    };
     this.router.navigate(['/tabs/testimonials']);
   }
 }

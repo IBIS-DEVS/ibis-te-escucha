@@ -40,9 +40,15 @@
         ></ion-input>
       </ion-item>
     </div>
+    <div class="error-comntainer ion-text-center ion-padding">
+      <ion-label *ngIf="!!error" color="danger">{{ error }}</ion-label>
+    </div>
 
     <ion-button (click)="onClickPublish()" class="ion-margin-top" expand="block"
       >Publicar</ion-button
     >
+    <div class="error-comntainer ion-text-center ion-padding">
+      <ion-label>** Su mensaje será publicado después de ser revisado</ion-label>
+    </div>
   </div>
 </ion-content>
