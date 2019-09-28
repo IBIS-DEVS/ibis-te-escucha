@@ -1,4 +1,5 @@
 export interface Testimonial {
+  id?: string; // Not need to save
   approved?: boolean;
   author: string;
   authorAge: string | number; // string by default
@@ -7,6 +8,7 @@ export interface Testimonial {
 }
 
 export const MOCK_TESTIMONIAL: Testimonial = {
+  id: 'USXaSJasdjIIsd',
   approved: true,
   author: 'Anonimus',
   authorAge: '25',

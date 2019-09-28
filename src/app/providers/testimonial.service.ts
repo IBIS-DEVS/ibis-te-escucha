@@ -28,8 +28,16 @@ export class TestimonialService {
   }
 
   private onTestimonial(snapshot: firebase.database.DataSnapshot) {
-    this.listTestimonials = snapshot.val();
+    const dicTestimonials = snapshot.val();
+    this.listTestimonials = Object.keys(snapshot.val()).map(id => ({
+      id,
+      ...dicTestimonials[id]
+    }));
     this.isLoading = false;
     console.debug('onTestimonial:', { testimonials: this.listTestimonials });
+  }
+
+  saveTestimonial(testimonial: Testimonial) {
+    this.testimonalsRef.push().set(testimonial);
   }
 }
