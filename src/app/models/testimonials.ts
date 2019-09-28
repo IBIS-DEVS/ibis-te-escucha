@@ -1,5 +1,5 @@
 export interface Testimonial {
-  approved: boolean;
+  approved?: boolean;
   author: string;
   authorAge: string | number; // string by default
   description: string;
