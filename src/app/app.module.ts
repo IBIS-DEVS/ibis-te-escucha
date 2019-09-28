@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatExpansionModule} from '@angular/material/expansion';
+import { TestimonialDetailPageModule } from './testimonial-detail/testimonial-detail.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AppRoutingModule, 
     BrowserAnimationsModule,
     MatExpansionModule,
+    TestimonialDetailPageModule
   ],
   providers: [
     StatusBar,

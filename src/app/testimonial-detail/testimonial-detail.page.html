@@ -1,12 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{testimonial.title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="dark" (click)="closeModal()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ testimonial.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h2>{{testimonial.author}}</h2>
-  <h3>{{testimonial.age}}</h3>
-
-  <p>{{testimonial.description}}</p>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Testimonio:</ion-card-subtitle>
+      <ion-card-title class="ion-text-nowrap">
+        {{ testimonial.title }}
+      </ion-card-title>
+      <div class="card-note-contariner ion-padding">
+        <ion-note class="ion-margin-bottom ion-padding">
+         Por {{ testimonial.author }},{{ testimonial.authorAge }} años
+        </ion-note>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="ion-text-wrap">{{ testimonial.description }}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
