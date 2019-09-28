@@ -18,6 +18,11 @@
       <div class="card-note-contariner ion-padding">
         <ion-note class="ion-margin-bottom ion-padding">{{testimonial.author}},{{testimonial.authorAge}} años</ion-note>
       </div>
-      
     </ion-card>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button routerLink="/new-testimonial">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
 </ion-content>
