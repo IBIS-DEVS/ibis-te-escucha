@@ -9,6 +9,7 @@ Ibis te escucha es una plataforma en la cuál cualquier persona pueda describir 
 # Tools 
 Framework: [Ionic Framework](https://ionicframework.com/)
 UI: [Angular Material](https://material.angular.io/)
+Images: [FreePik](freepik.com)
 
 # install proyect
 
