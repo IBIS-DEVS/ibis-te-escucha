@@ -10,6 +10,10 @@ Ibis te escucha es una plataforma en la cuál cualquier persona pueda describir 
 Framework: [Ionic Framework](https://ionicframework.com/)
 UI: [Angular Material](https://material.angular.io/)
 
+# See Demo in:
+## https://hackatrix-ibis.firebaseapp.com
+### https://hackatrix-ibis.firebaseapp.com/staff-login (user / pass)(juanse.cloud@gmail.com / abcd!234)
+
 # install proyect
 
 Run: 
